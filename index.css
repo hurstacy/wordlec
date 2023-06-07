@@ -3,3 +3,13 @@ body {
     font-size: larger;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+  .container {
+    grid-template-rows: repeat(3, 20px [col-start]);
+  }
+  .sheet {
+    display: grid
+    grid
+  }
+  .div {
+    float: left;
+  }
