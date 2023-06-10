@@ -42,7 +42,46 @@ function SubForm (){
     <input type="number" max="7" Min="1"name="wordleScore" />
     <br/>
     <br/>
-    <label>Waffle Score #</label><span id="count" value="504"></span>
+    <label>Waffle Score # 
+    <div id="count">504</div>
+
+    <script>
+      // Select the element where you want to display the count
+      const countElement = document.getElementById('count');
+
+      // Function to update the count
+      function updateCount() {
+        // Get the current count value from the element
+        let count = parseInt(countElement.textContent);
+
+        // Increment the count by 1
+        count++;
+
+        // Update the count in the element
+        countElement.textContent = count;
+      }
+
+      // Function to check the time and update the count at 11:59 PM
+      function checkTimeAndUpdateCount() {
+        const currentDate = new Date();
+        const currentHour = currentDate.getHours();
+        const currentMinute = currentDate.getMinutes();
+
+        // If it's 11:59 PM, call the updateCount function
+        if (currentHour === 23 && currentMinute === 59) {
+          updateCount();
+        }
+      }
+
+      // Initialize the count to 504
+      countElement.textContent = '504';
+
+      // Call the checkTimeAndUpdateCount function immediately
+      checkTimeAndUpdateCount();
+
+      // Call the checkTimeAndUpdateCount function every minute
+      setInterval(checkTimeAndUpdateCount, 60000);
+    </script>
     <br/>
     <input type="number" max="5" Min="0" name="waffleScore" />
     <br/>
