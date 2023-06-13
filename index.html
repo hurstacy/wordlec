@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Save Web Form Data to Spreadsheets - Contact Form</title>
+<title>Wordle Championship</title>
 <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -41,7 +41,7 @@ function SubForm (){
     <br/>
     <input type="number" max="7" Min="1"name="wordleScore" />
     <br/>
-    <br/>
+    <br>
     <label>Waffle Score # 
       <span id="count-display"></span></p>
 
@@ -73,8 +73,8 @@ function SubForm (){
           }
         }
   
-        // Initialize the count to 507 starting at 6/12
-        countElement.textContent = '507';
+        // Initialize the count to 507 starting at 6/13
+        countElement.textContent = 508;
   
         // Call the checkTimeAndUpdateCount function immediately
         checkTimeAndUpdateCount();
@@ -82,12 +82,10 @@ function SubForm (){
         // Call the checkTimeAndUpdateCount function every minute
         setInterval(checkTimeAndUpdateCount, 60000);
       </script>
-    </body>
-  </html>
     <input type="number" max="5" Min="0" name="waffleScore" />
-    <br/>
-    <br/>
     <label>
+      <br>
+      <br>
     Date:
     <input type="date" name="date" />
   </label>
