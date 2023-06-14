@@ -23,6 +23,18 @@ function SubForm (){
     });
 }
 
+function updateWaffleScore() {
+  var startDate = new Date('2023-06-14'); // Change the start date to the desired date
+  var currentDate = new Date();
+  var timeDiff = Math.abs(currentDate.getTime() - startDate.getTime());
+  var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+  var waffleScore = 509 + daysDiff;
+
+  document.getElementById('waffleScoreDisplay').innerText = waffleScore;
+}
+
+updateWaffleScore();
+
 </script>
 </head>
 <header><img src="/wordleimg.png" alt="Wordle"></header>
@@ -31,7 +43,7 @@ function SubForm (){
   <form id="myForm">
     <label>Name</label>
     <br/>
-    <div class ="ron"><input type="radio" id="name" name="name" value="Ron" /> Ron</div>
+    <div class="ron"><input type="radio" id="name" name="name" value="Ron" /> Ron</div>
     <input type="radio" id="name" name="name" value="Leigh" /> Leigh<br/>
     <input type="radio" id="name" name="name" value="Stacy" /> Stacy<br/>
     <input type="radio" id="name" name="name" value="Holly" /> Holly<br/>
@@ -39,53 +51,16 @@ function SubForm (){
     <br/>
     <label>Wordle Score</label>
     <br/>
-    <input type="number" max="7" Min="1"name="wordleScore" />
+    <input type="number" max="7" Min="1" name="wordleScore" />
     <br/>
     <br>
-    <label>Waffle Score # 
-      <span id="count-display"></span></p>
-
-      <script>
-        // Select the element where you want to display the count
-        const countElement = document.getElementById('count-display');
-  
-        // Function to update the count
-        function updateCount() {
-          // Get the current count value from the element
-          let count = parseInt(countElement.textContent);
-  
-          // Increment the count by 1
-          count++;
-  
-          // Update the count in the element
-          countElement.textContent = count;
-        }
-  
-        // Function to check the time and update the count at 11:59 PM
-        function checkTimeAndUpdateCount() {
-          const currentDate = new Date();
-          const currentHour = currentDate.getHours();
-          const currentMinute = currentDate.getMinutes();
-  
-          // If it's 11:59 PM, call the updateCount function
-          if (currentHour === 23 && currentMinute === 59) {
-            updateCount();
-          }
-        }
-  
-        // Initialize the count to 507 starting at 6/13
-        countElement.textContent = 508;
-  
-        // Call the checkTimeAndUpdateCount function immediately
-        checkTimeAndUpdateCount();
-  
-        // Call the checkTimeAndUpdateCount function every minute
-        setInterval(checkTimeAndUpdateCount, 60000);
-      </script>
+    <label>Waffle Score #</label>
+    <br> 
+    <br>
+    <span id="waffleScoreDisplay">509</span>
     <input type="number" max="5" Min="0" name="waffleScore" />
-    <label>
-      <br>
-      <br>
+    <br>
+    <br>
     Date:
     <input type="date" name="date" />
   </label>
@@ -96,7 +71,4 @@ function SubForm (){
   </form>    
   <br>
   <br>
-  <div style = "position:relative; left:550px; bottom:450px;"><iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubchart?oid=1681598650&amp;format=interactive"></iframe></div>
-</div>
-</body>
-</html>
+  <div style="position:relative; left:550px; bottom:450px;"><iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubchart?oid=1681598650
