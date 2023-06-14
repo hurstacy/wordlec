@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <!-- For iPhone: -->
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+<!-- For everything else: -->
+<link media="screen and (min-device-width: 481px)" href="not-small-device.css" type="text/css" rel="stylesheet">
 <head>
 <title>Wordle Championship</title>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -34,6 +40,7 @@ function updateWaffleScore() {
 </head>
 <header><img src="/wordleimg.png" alt="Wordle"></header>
 <body>
+  <div class="checkerboard">
   <div class="container">
     <form id="myForm">
       <label>Name</label>
@@ -46,20 +53,20 @@ function updateWaffleScore() {
       <br/>
       <label>Wordle Score</label>
       <br/>
-      <input type="number" max="7" Min="1" name="wordleScore" />
+      <input class=input type="number" max="7" Min="1" name="wordleScore" />
       <br/>
       <br>
       <div id="waffleScoreDisplay">
         Waffle Score# <span id="waffleScoreNumber"></span>
       </div>
-      <input type="number" max="5" Min="0" name="waffleScore" />
+      <input class=input type="number" max="5" Min="0" name="waffleScore" />
       <br>
       <br>
       Date:
-      <input type="date" name="date" />
+      <input class=input type="date" name="date" />
     </form>
     <br/>
-    <button onclick="SubForm()">Submit</button>
+    <button class=button onclick="SubForm()">Submit</button>
   </div>
   <br>
   <br>
@@ -68,6 +75,6 @@ function updateWaffleScore() {
 <script>
   updateWaffleScore();
 </script>
-
+</div>
 </body>
 </html>
