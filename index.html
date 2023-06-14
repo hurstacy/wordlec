@@ -2,12 +2,9 @@
 <html>
 <head>
 <title>Wordle Championship</title>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="index.css">
-  <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link rel="stylesheet" href="index.css">
+<script src="script.js"></script>
 <script>
 function SubForm (){
     $.ajax({
@@ -28,47 +25,49 @@ function updateWaffleScore() {
   var currentDate = new Date();
   var timeDiff = Math.abs(currentDate.getTime() - startDate.getTime());
   var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
-  var waffleScore = 509 + daysDiff;
+  var waffleScore = 508 + daysDiff;
 
-  document.getElementById('waffleScoreDisplay').innerText = waffleScore;
+  document.getElementById('waffleScoreNumber').textContent = waffleScore;
 }
-
-updateWaffleScore();
 
 </script>
 </head>
 <header><img src="/wordleimg.png" alt="Wordle"></header>
 <body>
   <div class="container">
-  <form id="myForm">
-    <label>Name</label>
+    <form id="myForm">
+      <label>Name</label>
+      <br/>
+      <div class="ron"><input type="radio" id="name" name="name" value="Ron" /> Ron</div>
+      <input type="radio" id="name" name="name" value="Leigh" /> Leigh<br/>
+      <input type="radio" id="name" name="name" value="Stacy" /> Stacy<br/>
+      <input type="radio" id="name" name="name" value="Holly" /> Holly<br/>
+      <input type="radio" id="name" name="name" value="Amber" /> Amber<br/>
+      <br/>
+      <label>Wordle Score</label>
+      <br/>
+      <input type="number" max="7" Min="1" name="wordleScore" />
+      <br/>
+      <br>
+      <div id="waffleScoreDisplay">
+        Waffle Score# <span id="waffleScoreNumber"></span>
+      </div>
+      <input type="number" max="5" Min="0" name="waffleScore" />
+      <br>
+      <br>
+      Date:
+      <input type="date" name="date" />
+    </form>
     <br/>
-    <div class="ron"><input type="radio" id="name" name="name" value="Ron" /> Ron</div>
-    <input type="radio" id="name" name="name" value="Leigh" /> Leigh<br/>
-    <input type="radio" id="name" name="name" value="Stacy" /> Stacy<br/>
-    <input type="radio" id="name" name="name" value="Holly" /> Holly<br/>
-    <input type="radio" id="name" name="name" value="Amber" /> Amber<br/>
-    <br/>
-    <label>Wordle Score</label>
-    <br/>
-    <input type="number" max="7" Min="1" name="wordleScore" />
-    <br/>
-    <br>
-    <label>Waffle Score #</label>
-    <br> 
-    <br>
-    <span id="waffleScoreDisplay">509</span>
-    <input type="number" max="5" Min="0" name="waffleScore" />
-    <br>
-    <br>
-    Date:
-    <input type="date" name="date" />
-  </label>
-  <br/>
-  </form>
-  <br/>
-  <button onclick="SubForm()">Submit</button>
-  </form>    
+    <button onclick="SubForm()">Submit</button>
+  </div>
   <br>
   <br>
-  <div style="position:relative; left:550px; bottom:450px;"><iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubchart?oid=1681598650
+  <div style="position:relative; left:550px; bottom:450px;"><iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pub"></iframe></div>
+
+<script>
+  updateWaffleScore();
+</script>
+
+</body>
+</html>
