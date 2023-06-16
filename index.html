@@ -18,7 +18,8 @@ function SubForm (){
         type:'post',
         data:$("#myForm").serializeArray(),
         success: function(){
-          alert("Form Data Submitted :)")
+          alert("Form Data Submitted :)"),
+          document.getElementById("myForm").reset();
         },
         error: function(){
           alert("There was an error :(")
@@ -47,27 +48,39 @@ function updateWaffleScore() {
   </div>
   <div class="container">
     <form id="myForm">
-      <label>Name</label>
-      <br/>
-      <div class="ron"><input type="radio" id="name" name="name" value="Ron" /> Ron</div>
+      <label class="label">Name</label>
+      <br>
+      <input type="radio" id="name" name="name" value="Ron" /> Ron <br/>
       <input type="radio" id="name" name="name" value="Leigh" /> Leigh<br/>
       <input type="radio" id="name" name="name" value="Stacy" /> Stacy<br/>
       <input type="radio" id="name" name="name" value="Holly" /> Holly<br/>
       <input type="radio" id="name" name="name" value="Amber" /> Amber<br/>
       <br/>
-      <label>Wordle Score</label>
+      <label class="label">Wordle Score</label>
       <br/>
-      <input class=input type="number" max="7" Min="1" name="wordleScore" />
-      <br/>
-      <br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="1" /> 1<br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="2" /> 2<br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="3" /> 3<br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="4" /> 4<br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="5" /> 5<br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="6" /> 6<br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="7" /> fail<br/>
+
       <div id="waffleScoreDisplay">
-        Waffle Score# <span id="waffleScoreNumber"></span>
+      <br>
+      <label class="label">Waffle Score #<span id="waffleScoreNumber"></span></label>
       </div>
-      <input class=input type="number" max="5" Min="0" name="waffleScore" />
+      <input type="radio" name="waffleScore" value="5" /> 5 stars<br/>
+      <input type="radio" name="waffleScore" value="4" /> 4 stars<br/>
+      <input type="radio" name="waffleScore" value="3" /> 3 stars<br/>
+      <input type="radio" name="waffleScore" value="2" /> 2 stars<br/>
+      <input type="radio" name="waffleScore" value="1" /> 1 stars<br/>
+      <input type="radio" name="waffleScore" value="0" /> 0 stars<br/>
+      <br>
+      <label class="label">Date:</label>
+      <input type="date" name="date" />
       <br>
       <br>
-      Date:
-      <p><input class=input type="date" name="date" /></p>
     </form>
     <br>
     <button class=button onclick="SubForm()">Submit</button>
