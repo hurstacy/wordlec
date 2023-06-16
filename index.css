@@ -1,12 +1,18 @@
 body {
     font-size: x-large;
+    display: grid;
+    grid-template-columns: 300px 1fr;
   }
   .container {
-    grid-template-rows: repeat(3, 20px [col-start]);
-    padding: 20px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    padding: 20px 20px 20px;
     font-size: x-large;
     font-weight:bold;
-    color: #383838;
+    color: #303e33;
+    border: #000000 solid 5px;
+    background-color: rgb(173, 174, 175);
+    width: 300px
   }
   .sheet {
     display: grid
@@ -14,7 +20,7 @@ body {
 .input {
   font-size: x-large;
 }
-  .checkerboard {
+.checkerboard {
     width: 600px;
     height: 800px;
     background-color: #fff;
@@ -50,4 +56,11 @@ body {
 
 .standings-container {
   border: solid 10px black;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  font-size: xx-large;
+  font-style: italic;
 }
