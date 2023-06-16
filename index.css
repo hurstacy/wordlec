@@ -22,7 +22,7 @@ body {
 }
 .checkerboard {
     width: 600px;
-    height: 800px;
+    height: 900px;
     background-color: #fff;
     background-image: linear-gradient(
         60deg,

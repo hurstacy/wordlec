@@ -42,8 +42,8 @@ function updateWaffleScore() {
 <header><img src="/wordleimg.png" alt="Wordle"></header>
 <body>
   <div class="links">
-    <p><a href="https://www.nytimes.com/games/wordle/index.html">Play Wordle now!</a></p>
-    <p><a href="https://wafflegame.net/daily">Play Waffle now!</a></p>
+    <p><a href="https://www.nytimes.com/games/wordle/index.html" target="_blank">Play Wordle now!</a></p>
+    <p><a href="https://wafflegame.net/daily" target="_blank">Play Waffle now!</a></p>
   </div>
   <div class="container">
     <form id="myForm">
@@ -59,7 +59,7 @@ function updateWaffleScore() {
       <br/>
       <input class=input type="number" max="7" Min="1" name="wordleScore" />
       <br/>
-      <br>
+      <br/>
       <div id="waffleScoreDisplay">
         Waffle Score# <span id="waffleScoreNumber"></span>
       </div>
@@ -67,16 +67,16 @@ function updateWaffleScore() {
       <br>
       <br>
       Date:
-      <input class=input type="date" name="date" />
+      <p><input class=input type="date" name="date" /></p>
     </form>
-    <br/>
+    <br>
     <button class=button onclick="SubForm()">Submit</button>
+  <br>
+  <br>
   </div>
-  <br>
-  <br>
-  <div class="standings-container">
+  <p><div class="standings-container">
     <iframe width="576" height="371" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubchart?oid=1681598650&amp;format=interactive"></iframe>
-  </div>
+  </div></p>
 <script>
   updateWaffleScore();
 </script>
