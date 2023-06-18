@@ -87,5 +87,7 @@ body {
 }
 
 .standings-container {
-  font-style: bold;
+  border: 10px solid black;
+  width: 596px;
+  height: 382px;
 }
