@@ -85,3 +85,7 @@ body {
   font-size: xx-large;
   font-style: italic;
 }
+
+.standings-container {
+  font-style: bold;
+}
