@@ -83,7 +83,7 @@ body {
 
 .links {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 410px 1fr;
   font-size: xx-large;
   font-style: italic;
 }
