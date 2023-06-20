@@ -6,7 +6,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    /* grid-template-columns: 450px 1fr; */
     padding: 20px 20px 20px 20px;
     font-size: x-large;
     font-weight:bold;
@@ -25,26 +25,22 @@ body {
   color:rgb(0, 0, 0)
 }
 
-/* .links {
-display:grid;
-grid-template-columns: auto;
-padding: 10px;
-} */
 
 .wordlelink {
   display: inline-block;
-  height: 55px;
-  width: 300px;
+  height: 75px;
+  width: 400px;
   background-image: url(wordleimg.png);
   background-size: 100%;
 }
 
 .wafflelink {
   display: inline-block;
-  height: 55px;
-  width: 250px;
+  height: 65px;
+  width: 370px;
   background-image: url(waffleimg.png);
   background-size: 100%;
+  padding-bottom: 10px;
 }
 
 .checkerboard {
@@ -87,7 +83,7 @@ padding: 10px;
 
 .links {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 420px 1fr;
   font-size: xx-large;
   font-style: italic;
 }
