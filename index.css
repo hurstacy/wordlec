@@ -7,7 +7,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    padding: 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     font-size: x-large;
     font-weight:bold;
     color: #303e33;
@@ -24,6 +24,12 @@ body {
 .label {
   color:rgb(0, 0, 0)
 }
+
+/* .links {
+display:grid;
+grid-template-columns: auto;
+padding: 10px;
+} */
 
 .wordlelink {
   display: inline-block;
