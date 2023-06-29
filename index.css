@@ -7,7 +7,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 380px 370px;
-    grid-template-rows: 300px repeat;
+    grid-template-rows: 300px 30px 200px 300px;
     padding: 20px 20px 20px 20px;
     font-size: x-large;
     font-weight:bold;
@@ -29,6 +29,18 @@ body {
     background-color: rgb(173, 174, 175);
   }
   
+  .yesterday {
+    display: grid;
+    grid-column: 2;
+    grid-row: 3;
+    padding: 0px 10px 20px 20px;
+    background-color:#3aa342;
+    height: 270px;
+    border: #000000 solid 5px;
+    background-color: rgb(173, 174, 175);
+  }
+  
+
 .input {
   font-size: x-large;
 }
@@ -81,14 +93,15 @@ body {
   
   .button {
     background-color:#44a745;
-    display: grid;
-    grid-column: 1;
+    /* display: grid;
+    grid-column: 1; */
+    grid-row: 5;
     color: #fff;
     border:none; 
     border-radius:10px; 
     padding:15px;
-    min-height:30px; 
-    max-width: 250px;
+    height:50px; 
+    width: 250px;
     font-size: 20px;
   }
 
