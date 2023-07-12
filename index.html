@@ -41,7 +41,7 @@ function updateWaffleScore() {
     <p><a href="https://www.nytimes.com/games/wordle/index.html" class="wordlelink" target="_blank"></a></p>
     <p><a href="https://wafflegame.net/daily" class="wafflelink" target="_blank"></a></p></div>
   <div class="container">
-    <form id="myForm">
+    <form class="myForm" id="myForm">
       <label class="label">Name</label>
       <br>
       <input type="radio" id="name" name="name" value="Ron" /> Ron <br/>
@@ -75,28 +75,22 @@ function updateWaffleScore() {
       <br>
       <label class="label">Date:</label>
       <input type="date" name="date" />
-      <br>
-      <br>
     </form>
-    <br>
     <button class=button onclick="SubForm()">Submit</button>
   <br>
 
   <div class="today">
     <h2>Today's Scores:
-      <p>
   <iframe width="304" height="148" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubhtml?gid=1014130280&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false"></iframe>
     </div>
     <div class="yesterday">
       <h2>Yesterday's Scores:
-        <p>
-    <iframe width="304" height="148" scrolling="no"src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubhtml?gid=1639240085&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false"></iframe>
+    <iframe width="304" height="148" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubhtml?gid=1639240085&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false"></iframe>
+  </div>
+  <div class="standings-container">
+    <iframe width="350" height="240" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubchart?oid=1681598650&amp;format=interactive"></iframe>
   </div>
 </div>
-  <p></p>
-  <div class="standings-container">
-    <iframe width="596" height="382" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3a0nw5DHlZJ_g2zEGCfrOPS4WY698HHm-h2-c0afa45k84qr--9ALn03i_DxlUpZkKuUM1KjluHsl/pubchart?oid=1681598650&amp;format=interactive"></iframe>
-  </div>
   <p></p>
 <script>
   updateWaffleScore();
