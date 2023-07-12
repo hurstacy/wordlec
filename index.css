@@ -73,8 +73,7 @@ body {
 }
 
 .checkerboard {
-    width: 100vw;
-    height: 200vh;
+    width: 800px;
     background-color: #fff;
     background-image: linear-gradient(
         60deg,
