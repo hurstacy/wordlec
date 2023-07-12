@@ -74,6 +74,7 @@ body {
 
 .checkerboard {
     width: 800px;
+    height: 1010px;
     background-color: #fff;
     background-image: linear-gradient(
         60deg,
