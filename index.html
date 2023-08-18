@@ -44,7 +44,7 @@ function updateWaffleScore() {
     <form class="myForm" id="myForm">
       <label class="label">Name</label>
       <br>
-      <input type="radio" id="name" name="name" value="Ron" /> Ron <br/>
+      <input type="radio" id="name" name="name" value="Ron" required/> Ron <br/>
       <input type="radio" id="name" name="name" value="Leigh" /> Leigh<br/>
       <input type="radio" id="name" name="name" value="Steph" /> Steph<br/>
       <input type="radio" id="name" name="name" value="Stacy" /> Stacy<br/>
@@ -53,7 +53,7 @@ function updateWaffleScore() {
       <br/>
       <label class="label">Wordle Score</label>
       <br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="1" /> 1<br/>
+      <input type="radio" name="wordleScore" id="wordleS" value="1" required/> 1<br/>
       <input type="radio" name="wordleScore" id="wordleS" value="2" /> 2<br/>
       <input type="radio" name="wordleScore" id="wordleS" value="3" /> 3<br/>
       <input type="radio" name="wordleScore" id="wordleS" value="4" /> 4<br/>
@@ -65,7 +65,7 @@ function updateWaffleScore() {
       <br>
       <label class="label">Waffle Score #<span id="waffleScoreNumber"></span></label>
       </div>
-      <input type="radio" name="waffleScore" value="5" /> 5 stars<br/>
+      <input type="radio" name="waffleScore" value="5" required/> 5 stars<br/>
       <input type="radio" name="waffleScore" value="4" /> 4 stars<br/>
       <input type="radio" name="waffleScore" value="3" /> 3 stars<br/>
       <input type="radio" name="waffleScore" value="2" /> 2 stars<br/>
@@ -74,7 +74,7 @@ function updateWaffleScore() {
       <input type="radio" name="waffleScore" value="-1" /> fail<br/>
       <br>
       <label class="label">Date:</label>
-      <input type="date" name="date" />
+      <input type="date" name="date" required />
     </form>
     <button class=button onclick="SubForm()">Submit</button>
   <br>
