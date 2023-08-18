@@ -44,39 +44,39 @@ function updateWaffleScore() {
     <form class="myForm" id="myForm">
       <label class="label">Name</label>
       <br>
-      <input type="radio" id="name" name="name" value="Ron" required/> Ron <br/>
-      <input type="radio" id="name" name="name" value="Leigh" /> Leigh<br/>
-      <input type="radio" id="name" name="name" value="Steph" /> Steph<br/>
-      <input type="radio" id="name" name="name" value="Stacy" /> Stacy<br/>
-      <input type="radio" id="name" name="name" value="Holly" /> Holly<br/>
-      <input type="radio" id="name" name="name" value="Amber" /> Amber<br/>
+      <input type="radio" name="name" value="Ron" required> Ron <br/>
+      <input type="radio" name="name" value="Leigh" required> Leigh<br/>
+      <input type="radio" name="name" value="Steph" required> Steph<br/>
+      <input type="radio" name="name" value="Stacy" required> Stacy<br/>
+      <input type="radio" name="name" value="Holly" required> Holly<br/>
+      <input type="radio" name="name" value="Amber" required> Amber<br/>
       <br/>
       <label class="label">Wordle Score</label>
       <br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="1" required/> 1<br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="2" /> 2<br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="3" /> 3<br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="4" /> 4<br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="5" /> 5<br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="6" /> 6<br/>
-      <input type="radio" name="wordleScore" id="wordleS" value="7" /> fail<br/>
-
+      <input type="radio" name="wordleScore" value="1" required> 1<br/>
+      <input type="radio" name="wordleScore" value="2" required> 2<br/>
+      <input type="radio" name="wordleScore" value="3" required> 3<br/>
+      <input type="radio" name="wordleScore" value="4" required> 4<br/>
+      <input type="radio" name="wordleScore" value="5" required> 5<br/>
+      <input type="radio" name="wordleScore" value="6" required> 6<br/>
+      <input type="radio" name="wordleScore" value="7" required> fail<br/>
+    
       <div id="waffleScoreDisplay">
-      <br>
-      <label class="label">Waffle Score #<span id="waffleScoreNumber"></span></label>
+        <br>
+        <label class="label">Waffle Score #<span id="waffleScoreNumber"></span></label>
       </div>
-      <input type="radio" name="waffleScore" value="5" required/> 5 stars<br/>
-      <input type="radio" name="waffleScore" value="4" /> 4 stars<br/>
-      <input type="radio" name="waffleScore" value="3" /> 3 stars<br/>
-      <input type="radio" name="waffleScore" value="2" /> 2 stars<br/>
-      <input type="radio" name="waffleScore" value="1" /> 1 stars<br/>
-      <input type="radio" name="waffleScore" value="0" /> 0 stars<br/>
-      <input type="radio" name="waffleScore" value="-1" /> fail<br/>
+      <input type="radio" name="waffleScore" value="5" required> 5 stars<br/>
+      <input type="radio" name="waffleScore" value="4" required> 4 stars<br/>
+      <input type="radio" name="waffleScore" value="3" required> 3 stars<br/>
+      <input type="radio" name="waffleScore" value="2" required> 2 stars<br/>
+      <input type="radio" name="waffleScore" value="1" required> 1 stars<br/>
+      <input type="radio" name="waffleScore" value="0" required> 0 stars<br/>
+      <input type="radio" name="waffleScore" value="-1" required> fail<br/>
       <br>
       <label class="label">Date:</label>
       <input type="date" name="date" required />
     </form>
-    <button class=button onclick="SubForm()">Submit</button>
+    <button class="button" onclick="SubForm()">Submit</button>
   <br>
 
   <div class="today">
