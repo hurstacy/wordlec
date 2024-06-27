@@ -7,21 +7,25 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <link rel="stylesheet" href="index.css">
 <script src="script.js"></script>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
 <script>
 function SubForm (){
-    $.ajax({
-        url:'https://api.apispreadsheets.com/data/vjpezTxtKxk8BB5X/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
-          alert("Thank you for submitting. Have a great day! :)"),
-          document.getElementById("myForm").reset();
-        },
-        error: function(){
-          alert("There was an error :(")
-        }
-    });
+  $.ajax({
+    url:"https://api.apispreadsheets.com/data/LFZcbiaxqdPerS8v/",
+    type:"post",
+    data:$("#myForm").serializeArray(),
+    success: function(){
+      alert("Form Data Submitted :)")
+    },
+    error: function(){
+      alert("There was an error :(")
+    }
+  });
 }
+</script>
 
 function updateWaffleScore() {
   var startDate = new Date('2023-06-14'); // Change the start date to the desired date
