@@ -11,25 +11,28 @@
 src="https://code.jquery.com/jquery-3.4.1.js"
 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 crossorigin="anonymous"></script>
-<script>
-function SubForm () {
-  var formData = new FormData(document.getElementById("myForm"));
-
-  $.ajax({
-    url: "https://api.apispreadsheets.com/data/w6SdBe9diTHVI31z/",
-    type: "post",
-    data: formData,
-    processData: false,
-    contentType: false,
-    success: function () {
-      alert("Form Data Submitted :)");
-    },
-    error: function () {
-      alert("There was an error :(");
-    }
-  });
-}
-</script>
+<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/w6SdBe9diTHVI31z/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				headers:{
+					accessKey: "6be39d5a02dd67273341564bcc566fd2",
+					secretKey: "7501da61f7a5afae1c8c9514e3a8aa02"},
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
 <script>
 
 function updateWaffleScore() {
