@@ -16,7 +16,7 @@ function SubForm () {
   var formData = new FormData(document.getElementById("myForm"));
 
   $.ajax({
-    url: "https://api.apispreadsheets.com/data/l8TFWPzgJjti0G2G/",
+    url: "https://api.apispreadsheets.com/data/l8TFWPzgJjti0G2G/?nonStrict=true",
     type: "post",
     data: formData,
     processData: false,
