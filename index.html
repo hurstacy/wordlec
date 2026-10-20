@@ -19,7 +19,6 @@ crossorigin="anonymous"></script>
       
 
       function SubForm() {
-        
   const form = document.getElementById("myForm");
 
   if (!form.reportValidity()) {
@@ -33,6 +32,9 @@ crossorigin="anonymous"></script>
   });
 
   fetch("https://api.apispreadsheets.com/data/wzLaRcOcanvxM8qB/?nonStrict=true", {
+  "accessKey": "a1a10eb7fb8062a2e8a6b981f64330f8",
+  "secretKey": "0950ee571230ffaff71032f63cc042f7"
+}, {
     method: "POST",
     body: JSON.stringify(values)
   })
