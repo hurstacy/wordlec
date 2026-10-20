@@ -20,7 +20,14 @@ crossorigin="anonymous"></script>
 			$.ajax({
 				url:"https://api.apispreadsheets.com/data/w6SdBe9diTHVI31z/?nonStrict=true",
 				type:"post",
-				data:$("#myForm").serializeArray(),
+				data:{
+"input_cells":{
+"Sheet1":{
+"A2":int45443
+"A3":string"HIGH"
+}
+}
+},
 				headers:{
 					accessKey: "6be39d5a02dd67273341564bcc566fd2",
 					secretKey: "7501da61f7a5afae1c8c9514e3a8aa02"},
