@@ -17,28 +17,35 @@ crossorigin="anonymous"></script>
 		crossorigin="anonymous"></script>
 	<script>
 		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/w6SdBe9diTHVI31z/?nonStrict=true",
-				type:"post",
-				data:{
-"input_cells":{
-"Sheet1":{
-"A2":int45443
-"A3":string"HIGH"
+      function SubForm() {
+  $.ajax({
+    url: "https://api.apispreadsheets.com/data/w6SdBe9diTHVI31z/?nonStrict=true",
+    type: "POST",
+    data: $("#myForm").serializeArray(),
+
+    // Add your newly rotated credentials only after
+    // you've confirmed the endpoint and secured them.
+    headers: {
+      accessKey: "YOUR_ACCESS_KEY",
+      secretKey: "YOUR_SECRET_KEY"
+    },
+
+    success: function (response) {
+      alert("Form submitted successfully!");
+      console.log("API response:", response);
+    },
+
+    error: function (xhr) {
+      console.error("Submission failed:", xhr.status);
+      console.error("Server response:", xhr.responseText);
+
+      alert(
+        "Submission failed (" + xhr.status + "). " +
+        "Open Developer Tools > Console for details."
+      );
+    }
+  });
 }
-}
-},
-				headers:{
-					accessKey: "6be39d5a02dd67273341564bcc566fd2",
-					secretKey: "7501da61f7a5afae1c8c9514e3a8aa02"},
-				success: function(){
-					alert("Form Data Submitted :)")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-		}
 	</script>
 <script>
 
