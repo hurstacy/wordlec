@@ -17,44 +17,40 @@ crossorigin="anonymous"></script>
 		crossorigin="anonymous"></script>
 	<script>
       
-function SubForm() {
+
+      function SubForm() {
   const form = document.getElementById("myForm");
 
   if (!form.reportValidity()) {
     return;
   }
 
-  const formData = {};
+  const values = {};
 
   $("#myForm").serializeArray().forEach(function (field) {
-    formData[field.name] = field.value;
+    values[field.name] = field.value;
   });
 
-  $.ajax({
-    url: "https://api.apispreadsheets.com/data/w6SdBe9diTHVI31z/?nonStrict=true",
-    type: "POST",
-    contentType: "application/json",
-    data: JSON.stringify({
-      data: [formData]
-    }),
+  fetch("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL", {
+    method: "POST",
+    body: JSON.stringify(values)
+  })
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (text) {
+    const result = JSON.parse(text);
 
-    headers: {
-      accessKey: "YOUR_VALID_ACCESS_KEY",
-      secretKey: "YOUR_VALID_SECRET_KEY"
-    },
-
-    success: function (response) {
-      alert("Scores submitted successfully!");
-      console.log("API response:", response);
-      form.reset();
-    },
-
-    error: function (xhr) {
-      console.error("HTTP status:", xhr.status);
-      console.error("Server response:", xhr.responseText);
-
-      alert("Submission failed. Check the browser console.");
+    if (!result.success) {
+      throw new Error(result.error || "Submission failed.");
     }
+
+    alert("Score saved to row " + result.row + "!");
+    form.reset();
+  })
+  .catch(function (error) {
+    console.error("Submission error:", error);
+    alert("Could not save the score. Check the console.");
   });
 }
 
