@@ -16,35 +16,48 @@ crossorigin="anonymous"></script>
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous"></script>
 	<script>
-      function SubForm() {
+      
+function SubForm() {
+  const form = document.getElementById("myForm");
+
+  if (!form.reportValidity()) {
+    return;
+  }
+
+  const formData = {};
+
+  $("#myForm").serializeArray().forEach(function (field) {
+    formData[field.name] = field.value;
+  });
+
   $.ajax({
     url: "https://api.apispreadsheets.com/data/w6SdBe9diTHVI31z/?nonStrict=true",
     type: "POST",
-    data: $("#myForm").serializeArray(),
+    contentType: "application/json",
+    data: JSON.stringify({
+      data: [formData]
+    }),
 
-    // Add your newly rotated credentials only after
-    // you've confirmed the endpoint and secured them.
     headers: {
-      accessKey: "YOUR_ACCESS_KEY",
-      secretKey: "YOUR_SECRET_KEY"
+      accessKey: "YOUR_VALID_ACCESS_KEY",
+      secretKey: "YOUR_VALID_SECRET_KEY"
     },
 
     success: function (response) {
-      alert("Form submitted successfully!");
+      alert("Scores submitted successfully!");
       console.log("API response:", response);
+      form.reset();
     },
 
     error: function (xhr) {
-      console.error("Submission failed:", xhr.status);
+      console.error("HTTP status:", xhr.status);
       console.error("Server response:", xhr.responseText);
 
-      alert(
-        "Submission failed (" + xhr.status + "). " +
-        "Open Developer Tools > Console for details."
-      );
+      alert("Submission failed. Check the browser console.");
     }
   });
 }
+
 	</script>
 <script>
 
