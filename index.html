@@ -19,6 +19,7 @@ crossorigin="anonymous"></script>
       
 
       function SubForm() {
+        
   const form = document.getElementById("myForm");
 
   if (!form.reportValidity()) {
@@ -31,8 +32,11 @@ crossorigin="anonymous"></script>
     values[field.name] = field.value;
   });
 
-  fetch("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL", {
-    method: "POST",
+  fetch("https://api.apispreadsheets.com/data/wzLaRcOcanvxM8qB/?nonStrict=true", {
+    method: "POST",{
+  "accessKey": "a1a10eb7fb8062a2e8a6b981f64330f8",
+  "secretKey": "0950ee571230ffaff71032f63cc042f7"
+}
     body: JSON.stringify(values)
   })
   .then(function (response) {
